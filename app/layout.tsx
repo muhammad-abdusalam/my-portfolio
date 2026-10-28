@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import { cookies } from "next/headers";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { LanguageProvider } from "@/components/LanguageProvider";
 import LanguageDirection from "@/components/LanguageDirection";
 import { ThemeProvider } from "@/components/ThemeProvider";
+
+export const instant = false;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,17 +65,28 @@ type RootLayoutProps = Readonly<{
   children: React.ReactNode;
 }>;
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default async function RootLayout({ children }: RootLayoutProps) {
+  const cookieStore = await cookies();
+
+  const savedTheme = cookieStore.get("theme")?.value;
+  const savedLanguage = cookieStore.get("language")?.value;
+
+  const initialTheme =
+    savedTheme === "dark" || savedTheme === "light" ? savedTheme : "light";
+
+  const initialLanguage =
+    savedLanguage === "ar" || savedLanguage === "en" ? savedLanguage : "en";
+
   return (
     <html
-      lang="en"
-      dir="ltr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      lang={initialLanguage}
+      dir={initialLanguage === "ar" ? "rtl" : "ltr"}
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased ${initialTheme === "dark" ? "dark" : ""}`}
       suppressHydrationWarning
     >
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
-        <ThemeProvider>
-          <LanguageProvider>
+        <ThemeProvider initialTheme={initialTheme}>
+          <LanguageProvider initialLanguage={initialLanguage}>
             <LanguageDirection />
             {children}
           </LanguageProvider>

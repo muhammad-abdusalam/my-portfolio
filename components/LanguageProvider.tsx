@@ -3,6 +3,7 @@
 import {
   createContext,
   useContext,
+  useEffect,
   useState,
   type ReactNode,
   type Dispatch,
@@ -16,14 +17,22 @@ type LanguageContextType = {
   setLanguage: Dispatch<SetStateAction<Language>>;
 };
 
-const LanguageContext = createContext<LanguageContextType | null>(null);
-
 type LanguageProviderProps = {
   children: ReactNode;
+  initialLanguage: Language;
 };
 
-export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [language, setLanguage] = useState<Language>("en");
+const LanguageContext = createContext<LanguageContextType | null>(null);
+
+export function LanguageProvider({
+  children,
+  initialLanguage,
+}: LanguageProviderProps) {
+  const [language, setLanguage] = useState<Language>(initialLanguage);
+
+  useEffect(() => {
+    document.cookie = `language=${language}; Path=/; Max-Age=31536000; SameSite=Lax`;
+  }, [language]);
 
   return (
     <LanguageContext.Provider value={{ language, setLanguage }}>

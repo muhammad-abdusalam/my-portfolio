@@ -6,8 +6,6 @@ import {
   useEffect,
   useState,
   type ReactNode,
-  type Dispatch,
-  type SetStateAction,
 } from "react";
 
 type Theme = "light" | "dark";
@@ -19,16 +17,19 @@ type ThemeContextType = {
 
 type ThemeProviderProps = {
   children: ReactNode;
+  initialTheme: Theme;
 };
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
-export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>("light");
+export function ThemeProvider({ children, initialTheme }: ThemeProviderProps) {
+  const [theme, setTheme] = useState<Theme>(initialTheme);
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
     document.documentElement.style.colorScheme = theme;
+
+    document.cookie = `theme=${theme}; Path=/; Max-Age=31536000; SameSite=Lax`;
   }, [theme]);
 
   function toggleTheme() {

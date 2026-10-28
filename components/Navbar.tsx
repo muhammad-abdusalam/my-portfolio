@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useLanguage } from "@/components/LanguageProvider";
 import { useTheme } from "@/components/ThemeProvider";
 
@@ -58,9 +59,15 @@ export default function Navbar() {
           }
           className="flex min-w-0 shrink items-center gap-2 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:gap-3"
         >
-          <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-primary text-sm font-bold text-on-primary sm:size-11">
-            MA
-          </span>
+          <Image
+            src="/logo.png"
+            alt=""
+            width={44}
+            height={44}
+            priority
+            aria-hidden="true"
+            className="size-10 shrink-0 object-contain sm:size-11"
+          />
 
           <span className="truncate text-sm font-semibold tracking-tight text-foreground sm:text-lg">
             {isEnglish ? "Muhammad Adam" : "محمد آدم"}
