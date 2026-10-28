@@ -60,7 +60,7 @@ export default function Navbar() {
           className="flex min-w-0 shrink items-center gap-2 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary sm:gap-3"
         >
           <Image
-            src="/logo.png"
+            src={theme === "light" ? "/logo-light.png" : "/logo-dark.png"}
             alt=""
             width={44}
             height={44}
