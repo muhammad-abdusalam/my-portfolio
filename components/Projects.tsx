@@ -49,7 +49,7 @@ const content = {
     eyebrow: "SOME OF MY WORK",
     title: "My Projects",
     description:
-      "A selection of demo projects that represent the kinds of web experiences I am learning to build.",
+      "A selection of projects showcasing my ability to build modern, interactive, and user-focused web experiences.",
     demo: "Live Demo",
     github: "GitHub",
     placeholder: "Demo project",
@@ -59,7 +59,7 @@ const content = {
     eyebrow: "نماذج من أعمالي",
     title: "مشاريعي",
     description:
-      "مجموعة من المشاريع التجريبية التي تمثل أنواع تجارب الويب التي أتعلم بناءها.",
+      "استكشف مجموعة من مشاريعي التي تعكس مهاراتي في تطوير واجهات ويب حديثة، تجمع بين التصميم المتقن والأداء العالي وسهولة الاستخدام.",
     demo: "معاينة المشروع",
     github: "GitHub",
     placeholder: "مشروع تجريبي",

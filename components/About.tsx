@@ -11,8 +11,8 @@ export default function About() {
       eyebrow: "A LITTLE ABOUT ME",
       title: "About Me",
       paragraphs: [
-        "Hi, I’m Muhammad Adam, a web developer focused on building interactive and practical user interfaces with React. I enjoy turning ideas into clear, user-friendly web experiences, and I keep learning by building projects and exploring new solutions.",
-        "I believe real growth comes from practice, problem-solving, and attention to detail. I’m working toward creating responsive, fast interfaces and writing clean, maintainable code.",
+        "I'm Muhammad Adam, a Frontend Developer passionate about building modern web experiences that combine clean design, high performance, and usability. I work on turning ideas and designs into interactive, responsive interfaces using React and Next.js, with a focus on writing clean, well-structured, and maintainable code.",
+        "I pay close attention to detail and strive to deliver digital experiences that work seamlessly across devices, while continuously improving my skills and building web products that provide real value to users.",
       ],
       highlights: [
         {
@@ -39,13 +39,13 @@ export default function About() {
       eyebrow: "نبذة عني",
       title: "من أنا",
       paragraphs: [
-        "أنا محمد آدم، مطور ويب أركز على بناء واجهات تفاعلية وعملية باستخدام React. أستمتع بتحويل الأفكار إلى تجارب ويب واضحة وسهلة الاستخدام، وأتعلم باستمرار من خلال بناء المشاريع وتجربة حلول جديدة.",
-        "أؤمن بأن التطور الحقيقي يأتي من الممارسة وحل المشكلات والاهتمام بالتفاصيل. وأسعى إلى تطوير مهاراتي في بناء واجهات سريعة ومتجاوبة، وكتابة كود منظم يسهل تطويره وصيانته.",
+        "أنا محمد آدم، مطور واجهات أمامية (Frontend Developer) مهتم ببناء تطبيقات ويب حديثة تجمع بين التصميم الجذاب والأداء العالي وسهولة الاستخدام. أعمل على تحويل الأفكار والتصاميم إلى واجهات تفاعلية ومتجاوبة باستخدام React وNext.js، مع التركيز على كتابة كود نظيف ومنظم وقابل للتطوير.",
+        "أحرص على الاهتمام بالتفاصيل وتقديم تجارب رقمية تعمل بكفاءة على مختلف الأجهزة، وأسعى باستمرار إلى تطوير مهاراتي وبناء منتجات ويب تقدم قيمة حقيقية للمستخدمين.",
       ],
       highlights: [
         {
           title: "اهتمامي الأساسي",
-          description: "React، بناء الواجهات، وتحسين تجربة المستخدم.",
+          description: "React، تطوير مواقع الويب، وتحسين تجربة المستخدم.",
           icon: "code",
         },
         {
@@ -57,7 +57,7 @@ export default function About() {
         {
           title: "هدفي المهني",
           description:
-            "بناء واجهات موثوقة وسهلة الاستخدام، والاستمرار في التطور كمطور ويب.",
+            "بناء منتجات موثوقة وسهلة الاستخدام، والاستمرار في التطور كمطور ويب.",
           icon: "target",
         },
       ],

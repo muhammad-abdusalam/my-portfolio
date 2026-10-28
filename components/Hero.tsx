@@ -8,34 +8,31 @@ export default function Hero() {
 
   const content = {
     en: {
-      availability: "Available for new opportunities",
       greeting: "Hi, I’m",
       name: "Muhammad Adam",
       description:
-        "Full-Stack Developer crafting fast, accessible, thoughtful web experiences.",
-      projects: "View My Projects",
+        "Frontend Developer building modern, interactive web interfaces that combine thoughtful design, high performance, and usability with Next.js.",
+      projects: "Explore My Projects",
       contact: "Contact Me",
-      role: "Full-Stack Developer",
-      location: "Based in Egypt",
+      role: "Frontend Developer",
       work: "Open to Work",
       codeName: "Muhammad Adam",
-      codeRole: "Full-Stack",
+      codeRole: "Frontend Developer",
       codePassion: "Building for the web",
       codeStatus: "Open to Work",
     },
     ar: {
-      availability: "متاح لفرص عمل جديدة",
       greeting: "مرحبًا، أنا",
       name: "محمد آدم",
-      description: "مطور ويب أبني تجارب ويب سريعة وسهلة الوصول ومدروسة بعناية.",
-      projects: "استعرض مشاريعي",
+      description:
+        "مطور ويب، أبني واجهات ويب حديثة وتفاعلية تجمع بين التصميم المتقن والأداء العالي وسهولة الاستخدام، باستخدام Next.js.",
+      projects: "استكشف مشاريعي",
       contact: "تواصل معي",
       role: "مطور ويب",
-      location: "مقيم في مصر",
       work: "متاح للعمل",
       codeName: "محمد آدم",
       codeRole: "مطور ويب",
-      codePassion: "بناء تجارب الويب",
+      codePassion: "بناء مواقع ويب",
       codeStatus: "متاح للعمل",
     },
   };
@@ -48,14 +45,6 @@ export default function Hero() {
       className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-20 md:grid-cols-2 md:gap-12 md:py-24 lg:gap-16 lg:px-10 lg:py-28"
     >
       <div>
-        <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-2 text-sm text-muted">
-          <span
-            aria-hidden="true"
-            className="size-2 rounded-full bg-emerald-500"
-          />
-          {text.availability}
-        </p>
-
         <h1 className="text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl">
           {text.greeting}
           <span className="mt-2 block text-primary">{text.name}</span>
@@ -83,15 +72,13 @@ export default function Hero() {
         </div>
 
         <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted">
-          {[text.role, text.location, text.work].map((item) => (
-            <li key={item} className="flex items-center gap-2">
-              <span
-                aria-hidden="true"
-                className="size-1.5 rounded-full bg-primary"
-              />
-              {item}
-            </li>
-          ))}
+          <li key={text.work} className="flex items-center gap-2">
+            <span
+              aria-hidden="true"
+              className="size-2 rounded-full bg-emerald-500"
+            />
+            {text.work}
+          </li>
         </ul>
       </div>
 
@@ -116,11 +103,6 @@ export default function Hero() {
           </div>
 
           <div className="p-4 sm:p-5">
-            <div className="mb-4 flex items-center gap-2 text-xs text-muted">
-              <span className="size-2 rounded-full bg-emerald-400" />
-              {text.codeStatus}
-            </div>
-
             <div className="overflow-x-auto rounded-xl dark:bg-[#0b1428] p-4 font-mono text-xs leading-7 text-slate-200 sm:p-5 sm:text-sm">
               <p>
                 <span className="text-purple-300">const</span>{" "}
@@ -154,7 +136,6 @@ export default function Hero() {
             </div>
 
             <div className="mt-4 flex items-center justify-between gap-3 text-xs text-muted">
-              <span>{text.codeStatus}</span>
               <span>JavaScript</span>
             </div>
           </div>

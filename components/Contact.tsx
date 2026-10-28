@@ -17,10 +17,12 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const content = {
-    title: isArabic ? "لنتواصل معًا" : "Let's Connect",
+    title: isArabic
+      ? "لنبنِ شيئًا مميزًا معًا"
+      : "Let's Build Something Great Together",
     description: isArabic
-      ? "يسعدني التواصل معك بشأن فرص العمل والتعاون في مشاريع الويب."
-      : "I'd love to hear from you about job opportunities and web development projects.",
+      ? "هل لديك مشروع أو فكرة ترغب في تحويلها إلى واقع؟ يسعدني أن أسمع منك ونستكشف معًا كيف يمكننا تنفيذها."
+      : "Have a project in mind or an idea you'd like to bring to life? I'd love to hear from you and explore how we can make it happen.",
     name: isArabic ? "الاسم" : "Name",
     namePlaceholder: isArabic ? "أدخل اسمك" : "Enter your name",
     email: isArabic ? "البريد الإلكتروني" : "Email Address",

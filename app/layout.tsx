@@ -28,27 +28,27 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Muhammad Adam | Full-Stack Developer",
+    default: "Muhammad Adam | Frontend Developer",
     template: "%s | Muhammad Adam",
   },
   description:
-    "Muhammad Adam is a full-stack developer building modern, accessible, and responsive web experiences.",
+    "Muhammad Adam is a frontend developer building modern, accessible, and responsive web experiences.",
   applicationName: "Muhammad Adam Portfolio",
   authors: [{ name: "Muhammad Adam" }],
   creator: "Muhammad Adam",
   openGraph: {
     type: "website",
-    title: "Muhammad Adam | Full-Stack Developer",
+    title: "Muhammad Adam | Frontend Developer",
     description:
-      "Explore Muhammad Adam's portfolio, projects, and full-stack development skills.",
+      "Explore Muhammad Adam's portfolio, projects, and Frontend development skills.",
     siteName: "Muhammad Adam Portfolio",
     locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Adam | Full-Stack Developer",
+    title: "Muhammad Adam | Frontend Developer",
     description:
-      "Explore Muhammad Adam's portfolio, projects, and full-stack development skills.",
+      "Explore Muhammad Adam's portfolio, projects, and Frontend development skills.",
   },
 };
 
