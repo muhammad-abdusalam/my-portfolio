@@ -20,9 +20,9 @@ export default function Navbar() {
     { href: "#contact", en: "Contact", ar: "تواصل معي" },
     {
       href: "/Muhammad_Adam_Resume.pdf",
-      en: "Resume ↗",
-      ar: "السيرة الذاتية ↗",
-      external: true,
+      en: "Resume ↓",
+      ar: "السيرة الذاتية ↓",
+      download: true,
     },
   ];
 
@@ -85,12 +85,9 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              target={
-                "external" in link && link.external ? "_blank" : undefined
-              }
-              rel={
-                "external" in link && link.external
-                  ? "noopener noreferrer"
+              download={
+                "download" in link && link.download
+                  ? "Muhammad_Adam_Resume.pdf"
                   : undefined
               }
               className="rounded-md py-2 text-sm font-medium text-muted transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none"
@@ -193,12 +190,9 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              target={
-                "external" in link && link.external ? "_blank" : undefined
-              }
-              rel={
-                "external" in link && link.external
-                  ? "noopener noreferrer"
+              download={
+                "download" in link && link.download
+                  ? "Muhammad_Adam_Resume.pdf"
                   : undefined
               }
               onClick={closeMenu}

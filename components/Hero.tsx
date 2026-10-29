@@ -14,7 +14,7 @@ export default function Hero() {
         "Frontend Developer building modern, interactive web interfaces that combine thoughtful design, high performance, and usability with Next.js.",
       projects: "Explore My Projects",
       contact: "Contact Me",
-      resume: "View Resume (PDF)",
+      resume: "Download Resume (PDF)",
       role: "Frontend Developer",
       work: "Open to Work",
       codeName: "Muhammad Adam",
@@ -28,7 +28,7 @@ export default function Hero() {
         "مطور ويب، أبني واجهات ويب حديثة وتفاعلية تجمع بين التصميم المتقن والأداء العالي وسهولة الاستخدام، باستخدام Next.js.",
       projects: "استكشف مشاريعي",
       contact: "تواصل معي",
-      resume: "عرض السيرة الذاتية (PDF)",
+      resume: "تنزيل السيرة الذاتية (PDF)",
       role: "مطور ويب",
       work: "متاح للعمل",
       codeName: "محمد آدم",
@@ -73,12 +73,11 @@ export default function Hero() {
 
         <a
           href="/Muhammad_Adam_Resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
+          download="Muhammad_Adam_Resume.pdf"
           className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-md text-sm font-medium text-muted underline decoration-border-strong underline-offset-4 transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none"
         >
           {text.resume}
-          <span aria-hidden="true">↗</span>
+          <span aria-hidden="true">↓</span>
         </a>
       </div>
 
