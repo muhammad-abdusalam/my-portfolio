@@ -14,12 +14,12 @@ export default function Hero() {
         "Frontend Developer building modern, interactive web interfaces that combine thoughtful design, high performance, and usability with Next.js.",
       projects: "Explore My Projects",
       contact: "Contact Me",
+      resume: "View Resume (PDF)",
       role: "Frontend Developer",
       work: "Open to Work",
       codeName: "Muhammad Adam",
       codeRole: "Frontend Developer",
       codePassion: "Building for the web",
-      codeStatus: "Open to Work",
     },
     ar: {
       greeting: "مرحبًا، أنا",
@@ -28,12 +28,12 @@ export default function Hero() {
         "مطور ويب، أبني واجهات ويب حديثة وتفاعلية تجمع بين التصميم المتقن والأداء العالي وسهولة الاستخدام، باستخدام Next.js.",
       projects: "استكشف مشاريعي",
       contact: "تواصل معي",
+      resume: "عرض السيرة الذاتية (PDF)",
       role: "مطور ويب",
       work: "متاح للعمل",
       codeName: "محمد آدم",
       codeRole: "مطور ويب",
       codePassion: "بناء مواقع ويب",
-      codeStatus: "متاح للعمل",
     },
   };
 
@@ -71,15 +71,15 @@ export default function Hero() {
           </a>
         </div>
 
-        <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-muted">
-          <li key={text.work} className="flex items-center gap-2">
-            <span
-              aria-hidden="true"
-              className="size-2 rounded-full bg-emerald-500"
-            />
-            {text.work}
-          </li>
-        </ul>
+        <a
+          href="/Muhammad_Adam_Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-4 inline-flex min-h-10 items-center gap-2 rounded-md text-sm font-medium text-muted underline decoration-border-strong underline-offset-4 transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none"
+        >
+          {text.resume}
+          <span aria-hidden="true">↗</span>
+        </a>
       </div>
 
       <div

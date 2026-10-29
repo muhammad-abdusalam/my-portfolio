@@ -18,6 +18,12 @@ export default function Navbar() {
     { href: "#skills", en: "Skills", ar: "مهاراتي" },
     { href: "#projects", en: "Projects", ar: "مشاريعي" },
     { href: "#contact", en: "Contact", ar: "تواصل معي" },
+    {
+      href: "/Muhammad_Adam_Resume.pdf",
+      en: "Resume ↗",
+      ar: "السيرة الذاتية ↗",
+      external: true,
+    },
   ];
 
   const controlClass =
@@ -79,6 +85,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              target={
+                "external" in link && link.external ? "_blank" : undefined
+              }
+              rel={
+                "external" in link && link.external
+                  ? "noopener noreferrer"
+                  : undefined
+              }
               className="rounded-md py-2 text-sm font-medium text-muted transition-colors hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-primary motion-reduce:transition-none"
             >
               {isEnglish ? link.en : link.ar}
@@ -179,6 +193,14 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
+              target={
+                "external" in link && link.external ? "_blank" : undefined
+              }
+              rel={
+                "external" in link && link.external
+                  ? "noopener noreferrer"
+                  : undefined
+              }
               onClick={closeMenu}
               className="rounded-lg px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-surface-secondary hover:text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary motion-reduce:transition-none"
             >
